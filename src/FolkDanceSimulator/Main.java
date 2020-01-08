@@ -1,18 +1,24 @@
 package FolkDanceSimulator;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    Scene menuScene;
+    Pane menuPane;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setTitle("Folk Dance Simulator 2020");
+
+        //Generate menu
+        menuPane = new Pane();
+        menuScene = new Scene(menuPane, 800, 600);
+        primaryStage.setScene(menuScene);
         primaryStage.show();
     }
 
