@@ -1,0 +1,6 @@
+#This is a handy-dandy little gitignore for IntelliJ projects I made :)
+
+#Don't track contents of IntelliJ-generated out folder
+out/
+#Don't track contents of IntelliJ-generated .idea folder
+.idea/
