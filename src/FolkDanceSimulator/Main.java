@@ -14,7 +14,7 @@ public class Main extends Application {
 
         Scene menuScene = new Scene(root, 600, 400);
 
-        primaryStage.setTitle("FXML Welcome");
+        primaryStage.setTitle("Folk Dance Simulator 2020");
         primaryStage.setScene(menuScene);
         primaryStage.show();
 }
