@@ -20,7 +20,7 @@ public class MenuController {
     private Button btnQuit;
 
     @FXML
-    void closeApp(ActionEvent event){
+    private void closeApp(ActionEvent event){
         System.out.println("Simulator out");
         System.exit(0);
     }

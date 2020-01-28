@@ -8,16 +8,45 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    AnchorPane menuRoot;
+    AnchorPane mainScreenRoot;
+    Scene menuScene;
+    Scene mainScreenScene;
+    Stage programStage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        AnchorPane root = FXMLLoader.load(getClass().getResource("FXMLSource/Menu.fxml"));
+        programStage = primaryStage;
+        menuRoot = FXMLLoader.load(getClass().getResource("FXMLSource/Menu.fxml"));
+        mainScreenRoot = FXMLLoader.load(getClass().getResource("FXMLSource/MainScreen.fxml"));
 
-        Scene menuScene = new Scene(root, 600, 400);
+        menuScene = new Scene(menuRoot, 600, 400);
+        mainScreenScene = new Scene(mainScreenRoot, 600, 400);
 
-        primaryStage.setTitle("Folk Dance Simulator 2020");
-        primaryStage.setScene(menuScene);
-        primaryStage.show();
-}
+        programStage.setTitle("Folk Dance Simulator 2020");
+        programStage.setScene(menuScene);
+        programStage.show();
+
+        setScreen("Test string");
+    }
+
+    public void setScreen(String str){
+        switch(str){
+            case "Menu":
+                programStage.setScene(menuScene);
+                programStage.show();
+                break;
+            case "MainScreen":
+                programStage.setScene(mainScreenScene);
+                programStage.show();
+                break;
+            default:
+                System.err.println("setScreen triggered with unknown string");
+                programStage.setScene(menuScene);
+                programStage.show();
+                break;
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);

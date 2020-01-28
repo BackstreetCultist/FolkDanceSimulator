@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="FolkDanceSimulator.FXMLControllers.MainScreenController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FolkDanceSimulator.FXMLControllers.MainScreenController">
+   <children>
+      <Line endX="499.0" layoutX="101.0" layoutY="300.0" startX="-100.0" />
+      <Button layoutX="451.0" layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="150.0" text="Button" />
+      <Button layoutX="301.0" layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="150.0" text="Button" />
+      <Button layoutX="151.0" layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="150.0" text="Button" />
+      <Button layoutX="1.0" layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="150.0" text="Button" />
+   </children>
 </AnchorPane>
